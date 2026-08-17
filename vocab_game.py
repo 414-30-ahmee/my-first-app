@@ -30,14 +30,14 @@ def show_result_dialog(ans1, ans2):
     u_ans2 = ans2.strip().lower()
 
     # ตรวจข้อ 1
-    if u_ans1 == "apple":
+    if u_ans1 == "Cherry":
         st.success("✅ ข้อ 1: ถูกต้อง")
         score += 1
     else:
         st.error(f"❌ ข้อ 1: ยังไม่ถูกต้อง (คุณตอบ '{u_ans1}')")
 
     # ตรวจข้อ 2
-    if u_ans2 == "fish":
+    if u_ans2 == "Cherry":
         st.success("✅ ข้อ 2: ถูกต้อง")
         score += 1
     else:
@@ -47,7 +47,7 @@ def show_result_dialog(ans1, ans2):
 
     st.info(f"🏆 ได้คะแนนรวม: {score} คะแนน")
 
-    if score == 2:
+    if score == 4:
         st.success("🎉 You win!")
     else:
         st.error("💀 You lose!")
@@ -72,11 +72,11 @@ st.divider()
 
 # 3. ช่องรับคำตอบ (ใช้ value ผูกกับตัวแปรตรงๆ เพื่อสั่งเคลียร์ได้)
 ans1 = st.text_input(
-    "ข้อ 1: An `a _ _ l e` a day keeps the doctor away. 🍎",
+    "ข้อ 1: An `b a _ a n _ ` a day keeps the doctor away. 🍌",
     value=st.session_state.ans1_val,
 )
 ans2 = st.text_input(
-    "ข้อ 2: Cats love to eat `f _ s h`. 🐟",
+    "ข้อ 2: Cats love to eat `c h e r r _ `. 🍒",
     value=st.session_state.ans2_val,
 )
 
